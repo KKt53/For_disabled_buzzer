@@ -1,4 +1,4 @@
-package com.example.for_disabled_buzzer
+package jp.example.for_disabled_buzzer
 
 import android.content.Context
 import android.os.Bundle
@@ -6,8 +6,12 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
-
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 class SettingActivity : AppCompatActivity() {
+
+    lateinit var mAdView : AdView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setting)
@@ -19,6 +23,12 @@ class SettingActivity : AppCompatActivity() {
         if (actionBar != null) {
             actionBar.title = "障害の名前を書いてください"
         }
+
+        MobileAds.initialize(this) {}
+
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
     }
 
     override fun onStart() {

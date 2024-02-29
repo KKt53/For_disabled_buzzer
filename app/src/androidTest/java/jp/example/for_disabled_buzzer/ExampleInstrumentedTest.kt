@@ -1,4 +1,4 @@
-package com.example.for_disabled_buzzer
+package jp.example.for_disabled_buzzer
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

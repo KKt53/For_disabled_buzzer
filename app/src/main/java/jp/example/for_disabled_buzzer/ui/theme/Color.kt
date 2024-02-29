@@ -1,4 +1,4 @@
-package com.example.for_disabled_buzzer.ui.theme
+package jp.example.for_disabled_buzzer.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package com.example.for_disabled_buzzer
+package jp.example.for_disabled_buzzer
 
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase

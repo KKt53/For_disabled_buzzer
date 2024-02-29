@@ -1,4 +1,4 @@
-package com.example.for_disabled_buzzer
+package jp.example.for_disabled_buzzer
 
 import android.content.Intent
 import android.database.Cursor
@@ -9,12 +9,14 @@ import android.widget.AdapterView
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 class ListActivity : AppCompatActivity() {
 
     private var helper: DatabaseHelper? = null
     var sc_adapter: MainListAdapter? = null
-
+    lateinit var mAdView : AdView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_list)
@@ -33,6 +35,12 @@ class ListActivity : AppCompatActivity() {
         if (actionBar != null) {
             actionBar.title = "困っていること一覧"
         }
+
+        MobileAds.initialize(this) {}
+
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
     }
 
 

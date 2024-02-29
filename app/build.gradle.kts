@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.for_disabled_buzzer"
+    namespace = "jp.example.for_disabled_buzzer"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.for_disabled_buzzer"
+        applicationId = "jp.example.for_disabled_buzzer"
         minSdk = 34
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -51,6 +51,7 @@ android {
 
 dependencies {
 
+    implementation("com.google.android.gms:play-services-ads:22.6.0")
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.11.0")

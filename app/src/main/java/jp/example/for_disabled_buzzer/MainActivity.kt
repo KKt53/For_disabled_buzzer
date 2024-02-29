@@ -1,4 +1,4 @@
-package com.example.for_disabled_buzzer
+package jp.example.for_disabled_buzzer
 
 import android.content.Context
 import android.content.Intent
@@ -12,18 +12,19 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 
 class MainActivity : AppCompatActivity() {
 
     private var sound = 0
     private var change_swich = false
-
+    lateinit var mAdView : AdView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
-
-        //setSupportActionBar(findViewById(R.id.main_toolbar))
 
         val fab = findViewById<FloatingActionButton?>(R.id.fab)
 
@@ -69,6 +70,12 @@ class MainActivity : AppCompatActivity() {
         if (actionBar != null) {
             actionBar.title = "ブザーを押すと音が鳴ります"
         }
+
+        MobileAds.initialize(this) {}
+
+        mAdView = findViewById(R.id.adView)
+        val adRequest = AdRequest.Builder().build()
+        mAdView.loadAd(adRequest)
     }
 
     override fun onStart() {
