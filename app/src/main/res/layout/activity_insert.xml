@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="障害で困っていることをここに入力してください" />
+        tools:text="解決法を書いてください" />
 
     <Button
         android:id="@+id/button_Handle"
@@ -66,7 +66,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="その生涯で困っていることでやってほしいことをここに入力してください" />
+        tools:text="具体的な解決法を書いてください" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -9,10 +9,10 @@ android {
 
     defaultConfig {
         applicationId = "jp.example.for_disabled_buzzer"
-        minSdk = 34
+        minSdk = 21
         targetSdk = 34
-        versionCode = 2
-        versionName = "1.1"
+        versionCode = 3
+        versionName = "1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

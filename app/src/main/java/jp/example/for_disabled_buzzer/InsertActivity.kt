@@ -34,6 +34,9 @@ class InsertActivity : AppCompatActivity()  {
         val handle = intent.getStringExtra("Handle")
         val upd_flg = intent.getIntExtra("upd_flag", 0)
 
+        edit_Name.setText("解決法を書いてください")
+        edit_Handle.setText("具体的な解決法を書いてください")
+
         // lambda
         buttonSave.setOnClickListener { v: View? ->
             val helper = DatabaseHelper(this)

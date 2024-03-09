@@ -13,8 +13,8 @@ class DatabaseHelper(context: Context?): SQLiteOpenHelper(context, "DB.sqlite", 
                 "CREATE TABLE " + DB_class.DBEntry.Table_Name +
                         "(" +
                         DB_class.DBEntry._ID + " INTEGER PRIMARY KEY," +
-                        DB_class.DBEntry.Name + " TEXT DEFAULT '障害で困っていることを入力してください'," +
-                        DB_class.DBEntry.Handle + " TEXT DEFAULT 'その生涯で困っていることでやってほしいことを書いてください'" +
+                        DB_class.DBEntry.Name + " TEXT DEFAULT '困っていることの細かい問題を入力してください'," +
+                        DB_class.DBEntry.Handle + " TEXT DEFAULT '対処法を書いてください'" +
                         ")"
             )
         }

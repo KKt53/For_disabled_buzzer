@@ -81,9 +81,9 @@ class MainActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
-        val sharedPref = getSharedPreferences("障害の名前", Context.MODE_PRIVATE)
+        val sharedPref = getSharedPreferences("困っている事の名前", Context.MODE_PRIVATE)
 
-        val savedText = sharedPref.getString("key", "障害名を入力してください")
+        val savedText = sharedPref.getString("key", "困っていることを入力してください")
 
         val editText = findViewById<TextView>(R.id.Name_text)
 

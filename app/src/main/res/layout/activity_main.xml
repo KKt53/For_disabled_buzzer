@@ -51,11 +51,12 @@
 
     <TextView
         android:id="@+id/Name_text"
-        android:layout_width="147dp"
-        android:layout_height="53dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="133dp"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="133dp"
+        android:inputType="textMultiLine"
         android:text="TextView"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"

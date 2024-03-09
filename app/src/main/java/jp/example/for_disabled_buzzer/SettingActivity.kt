@@ -21,7 +21,7 @@ class SettingActivity : AppCompatActivity() {
 
         val actionBar = supportActionBar
         if (actionBar != null) {
-            actionBar.title = "障害の名前を書いてください"
+            actionBar.title = "困っていることを書いてください"
         }
 
         MobileAds.initialize(this) {}
@@ -34,9 +34,12 @@ class SettingActivity : AppCompatActivity() {
     override fun onStart() {
         super.onStart()
 
-        val sharedPref = getSharedPreferences("障害の名前", Context.MODE_PRIVATE)
+        //val sharedPref = getSharedPreferences("困っていること", Context.MODE_PRIVATE)
 
-        val savedText = sharedPref.getString("key", "障害名を入力してください")
+        //val savedText = sharedPref.getString("key", "困っていることを入力してください")
+        val sharedPref = getSharedPreferences("困っている事の名前", Context.MODE_PRIVATE)
+
+        val savedText = sharedPref.getString("key", "困っていることを入力してください")
 
         val editText = findViewById<EditText>(R.id.edit_setting)
 
